@@ -15,7 +15,7 @@ import Student from './Student'
 
 function App() {
 
-    const [login, setLogin] = useState(Cookies.get('token') !== undefined ? true : false)
+    const [login, setLogin] = useState(Cookies.get('token') !== null && Cookies.get('token') !== undefined ? true : false)
     const [phoneNumber, setPhoneNumber] = useState('')
     const [password, setPassword] = useState('')
     const [response, setResponse] = useState('')
